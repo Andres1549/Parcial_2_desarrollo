@@ -2,7 +2,6 @@
 
 Aplicación FastAPI + SQLModel para gestionar empleados, proyectos y asignaciones.
 
----
 
 ## Requisitos
 - Python 3.10+
@@ -41,6 +40,17 @@ uvicorn app.main:app --reload
 
 -Soft delete (estado = False): los registros no se borran físicamente.
 
+## Códigos de Estado Usados
+
+| Código | Significado | Cuándo se usa |
+|:--------|:-------------|:-----------------------------|
+| **200 OK** | Petición exitosa | Consultas (`GET`), actualizaciones (`PUT`), eliminaciones lógicas (`DELETE`) correctas |
+| **201 Created** | Recurso creado correctamente | Creación de empleados, proyectos o asignaciones (`POST`) |
+| **400 Bad Request** | Error de validación o regla de negocio | Cuando no se puede eliminar un gerente activo o datos inválidos |
+| **404 Not Found** | Recurso no encontrado | Cuando no existe el empleado, proyecto o asignación solicitada |
+| **409 Conflict** | Conflicto con los datos existentes | Nombre de proyecto duplicado o asignación repetida |
+
+
 ## Mapa de endpoints
 
 ### Empleados
@@ -71,3 +81,5 @@ uvicorn app.main:app --reload
 |:--------|:------|:-------------|:------------------|:----------------------|
 | **POST** | `/asignaciones/` | Asignar empleado a un proyecto | JSON `{ empleado_id, proyecto_id }` | `201 Created` o `409 Conflict` si ya asignado |
 | **DELETE** | `/asignaciones/` | Desasignar empleado de un proyecto | JSON `{ empleado_id, proyecto_id }` | `200 OK` o `404 Not Found` |
+
+
