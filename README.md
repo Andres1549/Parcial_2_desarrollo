@@ -40,6 +40,8 @@ uvicorn app.main:app --reload
 
 -Soft delete (estado = False): los registros no se borran físicamente.
 
+-Un empleado que ya sea gerente de un proyecto no puede ser asignado además como empleado del mismo proyecto.
+
 ## Códigos de Estado Usados
 
 | Código | Significado | Cuándo se usa |
