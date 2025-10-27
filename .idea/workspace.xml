@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="schemas pydantic y utils para validaciones listos">
-      <change afterPath="$PROJECT_DIR$/app/routers/empleados.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routers/proyectos.py" afterDir="false" />
+    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="empleados y proyectos ya estan declarados sus endpoints y errores que pueden tener">
+      <change afterPath="$PROJECT_DIR$/app/routers/asignaciones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +254,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761569648051</updated>
-      <workItem from="1761569648741" duration="3128000" />
+      <workItem from="1761569648741" duration="3338000" />
     </task>
     <task id="LOCAL-00001" summary="requirements, db,py y inicio de las declaraciones">
       <option name="closed" value="true" />
@@ -280,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761573949555</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="empleados y proyectos ya estan declarados sus endpoints y errores que pueden tener">
+      <option name="closed" value="true" />
+      <created>1761574256123</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761574256123</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +298,7 @@
     <MESSAGE value="requirements, db,py y inicio de las declaraciones" />
     <MESSAGE value="modelos hechos por el momento" />
     <MESSAGE value="schemas pydantic y utils para validaciones listos" />
-    <option name="LAST_COMMIT_MESSAGE" value="schemas pydantic y utils para validaciones listos" />
+    <MESSAGE value="empleados y proyectos ya estan declarados sus endpoints y errores que pueden tener" />
+    <option name="LAST_COMMIT_MESSAGE" value="empleados y proyectos ya estan declarados sus endpoints y errores que pueden tener" />
   </component>
 </project>
