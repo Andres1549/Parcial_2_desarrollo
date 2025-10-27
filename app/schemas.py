@@ -13,7 +13,7 @@ class EmpleadoCreate(EmpleadoBase):
 class EmpleadoRead(EmpleadoBase):
     id: int
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ProyectoBase(BaseModel):
     nombre: str
@@ -28,7 +28,7 @@ class ProyectoCreate(ProyectoBase):
 class ProyectoRead(ProyectoBase):
     id: int
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class AsignacionBase(BaseModel):
     id_empleado: int
