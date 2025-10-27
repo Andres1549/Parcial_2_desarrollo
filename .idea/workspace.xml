@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="requirements, db,py y inicio de las declaraciones">
-      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="schemas pydantic y utils para validaciones listos">
+      <change afterPath="$PROJECT_DIR$/app/routers/empleados.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routers/proyectos.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,9 @@
   "associatedIndex": 1
 }]]></component>
   <component name="ProjectId" id="34eMZw3iCPVxjEm7YQYwMHAkh3i" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -250,7 +254,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1761569648051</updated>
-      <workItem from="1761569648741" duration="2644000" />
+      <workItem from="1761569648741" duration="3128000" />
     </task>
     <task id="LOCAL-00001" summary="requirements, db,py y inicio de las declaraciones">
       <option name="closed" value="true" />
@@ -260,7 +264,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761573526059</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modelos hechos por el momento">
+      <option name="closed" value="true" />
+      <created>1761573726252</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761573726252</updated>
+    </task>
+    <task id="LOCAL-00003" summary="schemas pydantic y utils para validaciones listos">
+      <option name="closed" value="true" />
+      <created>1761573949555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761573949555</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +288,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="requirements, db,py y inicio de las declaraciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="requirements, db,py y inicio de las declaraciones" />
+    <MESSAGE value="modelos hechos por el momento" />
+    <MESSAGE value="schemas pydantic y utils para validaciones listos" />
+    <option name="LAST_COMMIT_MESSAGE" value="schemas pydantic y utils para validaciones listos" />
   </component>
 </project>
