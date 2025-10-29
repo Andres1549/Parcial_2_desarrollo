@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlmodel import Session, select
 from app.db import get_session
 from app.models import Empleado, Proyecto
-from app.schemas import EmpleadoCreate, EmpleadoRead
+from app.schemas import EmpleadoCreate, EmpleadoRead, EmpleadoUpdate
 from app.utils import verificar_existe, conflicto
 
 router = APIRouter(prefix="/empleados", tags=["Empleados"])
@@ -35,12 +35,15 @@ def obtener_empleado(id: int, session: Session = Depends(get_session)):
     verificar_existe(empleado, "Empleado")
     return empleado
 
-@router.put("/{id}", response_model=EmpleadoRead)
-def actualizar_empleado(id: int, data: EmpleadoCreate, session: Session = Depends(get_session)):
-    empleado = session.get(Empleado, id)
-    verificar_existe(empleado, "Empleado")
-    for key, value in data.dict().items():
-        setattr(empleado, key, value)
+@router.patch("/{empleado_id}", response_model=EmpleadoRead)
+def actualizar_empleado(empleado_id: int, data: EmpleadoUpdate, session: Session = Depends(get_session)):
+    empleado = session.get(Empleado, empleado_id)
+    if not empleado:
+        raise HTTPException(status_code=404, detail="Empleado no encontrado")
+
+    for field, value in data.dict(exclude_unset=True).items():
+        setattr(empleado, field, value)
+
     session.add(empleado)
     session.commit()
     session.refresh(empleado)
