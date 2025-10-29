@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlmodel import Session, select
 from app.db import get_session
 from app.models import Proyecto, Empleado
-from app.schemas import ProyectoCreate, ProyectoRead
+from app.schemas import ProyectoCreate, ProyectoRead, ProyectoUpdate
 from app.utils import verificar_existe, conflicto
 
 router = APIRouter(prefix="/proyectos", tags=["Proyectos"])
@@ -44,15 +44,15 @@ def obtener_proyecto(id: int, session: Session = Depends(get_session)):
     verificar_existe(proyecto, "Proyecto")
     return proyecto
 
-@router.put("/{id}", response_model=ProyectoRead)
-def actualizar_proyecto(id: int, data: ProyectoCreate, session: Session = Depends(get_session)):
-    proyecto = session.get(Proyecto, id)
-    verificar_existe(proyecto, "Proyecto")
-    otro = session.exec(select(Proyecto).where(Proyecto.nombre == data.nombre, Proyecto.id != id)).first()
-    if otro:
-        conflicto("Nombre de proyecto ya en uso")
-    for key, value in data.dict().items():
-        setattr(proyecto, key, value)
+@router.patch("/{proyecto_id}", response_model=ProyectoRead)
+def actualizar_proyecto(proyecto_id: int, data: ProyectoUpdate, session: Session = Depends(get_session)):
+    proyecto = session.get(Proyecto, proyecto_id)
+    if not proyecto:
+        raise HTTPException(status_code=404, detail="Proyecto no encontrado")
+
+    for field, value in data.dict(exclude_unset=True).items():
+        setattr(proyecto, field, value)
+
     session.add(proyecto)
     session.commit()
     session.refresh(proyecto)

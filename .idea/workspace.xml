@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="cambio en schemas para que concuerde con la version de pydantic">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="cambio de put a pacht en empleados para mejor actualizacion" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761569648051</updated>
       <workItem from="1761569648741" duration="7226000" />
-      <workItem from="1761754721979" duration="482000" />
+      <workItem from="1761754721979" duration="802000" />
     </task>
     <task id="LOCAL-00001" summary="requirements, db,py y inicio de las declaraciones">
       <option name="closed" value="true" />
@@ -173,7 +171,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761577059685</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="cambio en schemas para que se pueda actualizar un solo campo">
+      <option name="closed" value="true" />
+      <created>1761755341584</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1761755341584</updated>
+    </task>
+    <task id="LOCAL-00011" summary="cambio de put a pacht en empleados para mejor actualizacion">
+      <option name="closed" value="true" />
+      <created>1761755520019</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1761755520019</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +203,8 @@
     <MESSAGE value="version 2 del readme" />
     <MESSAGE value="cambio en asignaciones para el gerente" />
     <MESSAGE value="cambio en schemas para que concuerde con la version de pydantic" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio en schemas para que concuerde con la version de pydantic" />
+    <MESSAGE value="cambio en schemas para que se pueda actualizar un solo campo" />
+    <MESSAGE value="cambio de put a pacht en empleados para mejor actualizacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio de put a pacht en empleados para mejor actualizacion" />
   </component>
 </project>
