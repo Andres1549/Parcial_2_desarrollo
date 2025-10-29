@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="cambio de put a pacht en empleados para mejor actualizacion" />
+    <list default="true" id="3efa6071-af3c-4510-9e52-28fa7e271883" name="Changes" comment="readme actualizado">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/asignaciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/asignaciones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761569648051</updated>
       <workItem from="1761569648741" duration="7226000" />
-      <workItem from="1761754721979" duration="802000" />
+      <workItem from="1761754721979" duration="3387000" />
     </task>
     <task id="LOCAL-00001" summary="requirements, db,py y inicio de las declaraciones">
       <option name="closed" value="true" />
@@ -187,7 +191,31 @@
       <option name="project" value="LOCAL" />
       <updated>1761755520019</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="cambio de put a pacht en proyectos para mejor actualizacion">
+      <option name="closed" value="true" />
+      <created>1761755590623</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1761755590623</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ahora se puede desasignar un empleado a un proyecto">
+      <option name="closed" value="true" />
+      <created>1761755729150</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1761755729150</updated>
+    </task>
+    <task id="LOCAL-00014" summary="readme actualizado">
+      <option name="closed" value="true" />
+      <created>1761755867426</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1761755867426</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +233,9 @@
     <MESSAGE value="cambio en schemas para que concuerde con la version de pydantic" />
     <MESSAGE value="cambio en schemas para que se pueda actualizar un solo campo" />
     <MESSAGE value="cambio de put a pacht en empleados para mejor actualizacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio de put a pacht en empleados para mejor actualizacion" />
+    <MESSAGE value="cambio de put a pacht en proyectos para mejor actualizacion" />
+    <MESSAGE value="ahora se puede desasignar un empleado a un proyecto" />
+    <MESSAGE value="readme actualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme actualizado" />
   </component>
 </project>

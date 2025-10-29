@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 class EmpleadoBase(BaseModel):
@@ -31,8 +31,18 @@ class ProyectoBase(BaseModel):
 class ProyectoCreate(ProyectoBase):
     pass
 
-class ProyectoRead(ProyectoBase):
+
+class ProyectoRead(BaseModel):
     id: int
+    nombre: str
+    descripcion: str
+    presupuesto: float
+    id_gerente: int
+    estado: bool
+    empleados: List[EmpleadoRead] = [
+
+    ]
+
     class Config:
         from_attributes = True
 

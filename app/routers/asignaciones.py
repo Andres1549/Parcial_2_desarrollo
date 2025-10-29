@@ -41,7 +41,6 @@ def asignar_empleado(asignacion: AsignacionBase, session: Session = Depends(get_
         content={
             "message": "Empleado asignado correctamente",
             "data": {
-                "id": nueva_asignacion.id,
                 "id_empleado": nueva_asignacion.id_empleado,
                 "id_proyecto": nueva_asignacion.id_proyecto,
             },
