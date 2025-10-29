@@ -57,25 +57,25 @@ uvicorn app.main:app --reload
 
 ### Empleados
 
-| Método | Ruta | Descripción | Parámetros / Body | Respuestas esperadas |
-|:--------|:------|:-------------|:------------------|:----------------------|
-| **POST** | `/empleados/` | Crear nuevo empleado | JSON `{ nombre, especialidad, salario, estado }` | `201 Created` con empleado creado |
-| **GET** | `/empleados/` | Listar empleados (con filtros) | Query: `especialidad`, `estado` | `200 OK` lista de empleados activos |
-| **GET** | `/empleados/{empleado_id}` | Obtener empleado por ID (incluye proyectos) | — | `200 OK` o `404 Not Found` |
-| **PUT** | `/empleados/{empleado_id}` | Actualizar datos de empleado | JSON con campos a actualizar | `200 OK` o `404 Not Found` |
+| Método     | Ruta | Descripción | Parámetros / Body | Respuestas esperadas |
+|:-----------|:------|:-------------|:------------------|:----------------------|
+| **POST**   | `/empleados/` | Crear nuevo empleado | JSON `{ nombre, especialidad, salario, estado }` | `201 Created` con empleado creado |
+| **GET**    | `/empleados/` | Listar empleados (con filtros) | Query: `especialidad`, `estado` | `200 OK` lista de empleados activos |
+| **GET**    | `/empleados/{empleado_id}` | Obtener empleado por ID (incluye proyectos) | — | `200 OK` o `404 Not Found` |
+| **PATCH**  | `/empleados/{empleado_id}` | Actualizar datos de empleado | JSON con campos a actualizar | `200 OK` o `404 Not Found` |
 | **DELETE** | `/empleados/{empleado_id}` | Eliminar (soft delete) empleado | — | `200 OK` o `400` si es gerente activo |
-| **GET** | `/empleados/{empleado_id}/proyectos` | Consultar proyectos en los que participa el empleado | — | `200 OK` con lista de proyectos |
+| **GET**    | `/empleados/{empleado_id}/proyectos` | Consultar proyectos en los que participa el empleado | — | `200 OK` con lista de proyectos |
 
 ### Proyectos
 
-| Método | Ruta | Descripción | Parámetros / Body | Respuestas esperadas |
-|:--------|:------|:-------------|:------------------|:----------------------|
-| **POST** | `/proyectos/` | Crear proyecto con gerente | JSON `{ nombre, descripcion, presupuesto, gerente_id, estado }` | `201 Created` o `409 Conflict` si nombre duplicado |
-| **GET** | `/proyectos/` | Listar proyectos (con filtros) | Query: `estado`, `presupuesto_min`, `presupuesto_max` | `200 OK` lista de proyectos activos |
-| **GET** | `/proyectos/{proyecto_id}` | Obtener proyecto con gerente y empleados asignados | — | `200 OK` o `404 Not Found` |
-| **PUT** | `/proyectos/{proyecto_id}` | Actualizar datos del proyecto | JSON con campos a actualizar | `200 OK` o `404 Not Found` |
+| Método     | Ruta | Descripción | Parámetros / Body | Respuestas esperadas |
+|:-----------|:------|:-------------|:------------------|:----------------------|
+| **POST**   | `/proyectos/` | Crear proyecto con gerente | JSON `{ nombre, descripcion, presupuesto, gerente_id, estado }` | `201 Created` o `409 Conflict` si nombre duplicado |
+| **GET**    | `/proyectos/` | Listar proyectos (con filtros) | Query: `estado`, `presupuesto_min`, `presupuesto_max` | `200 OK` lista de proyectos activos |
+| **GET**    | `/proyectos/{proyecto_id}` | Obtener proyecto con gerente y empleados asignados | — | `200 OK` o `404 Not Found` |
+| **PATCH**  | `/proyectos/{proyecto_id}` | Actualizar datos del proyecto | JSON con campos a actualizar | `200 OK` o `404 Not Found` |
 | **DELETE** | `/proyectos/{proyecto_id}` | Eliminar (soft delete) proyecto | — | `200 OK` o `404 Not Found` |
-| **GET** | `/proyectos/{proyecto_id}/empleados` | Consultar empleados asignados a un proyecto | — | `200 OK` con lista de empleados |
+| **GET**    | `/proyectos/{proyecto_id}/empleados` | Consultar empleados asignados a un proyecto | — | `200 OK` con lista de empleados |
 
 ### Asignaciones
 
